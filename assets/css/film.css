@@ -160,12 +160,13 @@ h2{
 
 .video {
     position: absolute;
-    z-index: 0;
+    z-index: 5;
     padding-bottom: 0px;
-    padding-top: 300px;
     padding-left: 567px;
-    width: 510px;
-    height: 294px;
+    width: 508px;
+    height: 287px;
+    padding-top: 305px;
+
 
 }
 
