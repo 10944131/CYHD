@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popping</title>
+    <style>
+        body{
+            background-color: #f0f0f0;
+        }
+        img.t{
+            height: 95px;
+            width: 110px;
+            padding: 3px 1px 3px 3px;
+            float: left;
+        }
+        h2.t{
+            padding: 9px;
+            float: left;
+            color: white;
+        }
+        #menu {
+            width: 1500px;
+            height:100px;
+            background-color: #7494b6;
+            text-align: center;
+        }
+        #menu ul {
+            list-style-type:none;
+            margin:0;
+            padding:35px 10px 20px 10px;
+            display: inline-block;
+        }
+        #menu ul li {
+            float:left;
+        }
+        #menu ul li a {
+            display:block;
+            float:left;
+            height:30px;
+            width: 100px;
+            text-align: center;
+        }
+        #menu ul li ul {
+            position:absolute;
+            width:100px;
+            overflow:visible;
+            clear:left;
+            margin-top: 30px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+        #menu ul li ul li {
+            float:none;
+            text-align: center;
+        }
+        #menu ul li ul li a {
+            float:none;
+            width: 100%;
+        }
+        #menu ul li ul li ul {
+            margin-top: -30px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 100px;
+            width: 100%;
+        }
+        #menu ul li ul {
+            visibility:hidden;
+        }
+        #menu ul li:hover ul {
+            visibility:visible;
+        }
+        #menu {
+            font-size:20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #menu ul {
+            background: #7494b6;
+        }
+        #menu ul li a {
+            color:white;
+            text-decoration:none;
+            line-height: 30px;
+        }
+        #menu ul li ul {
+            display: block;
+            background:#b0c4de;
+        }
+        #menu ul li ul li a {
+            font-size:18px;
+            color:#000;
+            text-decoration:none;
+        }
+        #menu ul li:hover, #menu ul li a:hover {
+            background:#f0f0f0;
+        }
+        #menu ul li:hover a {
+            color:#333333;
+        }
+        #menu ul li ul li:hover, #menu ul li ul li a:hover {
+            background:white;
+        }
+
+        .flip-container {
+            perspective: 1000;
+        }
+        .flip-container:hover .flipper, .flip-container.hover .flipper {
+            transform: rotateY(180deg);
+        }
+        .flip-container, .front, .back {
+            width: 400px;
+            height: 500px;
+        }
+        .flipper {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        .front, .back {
+            backface-visibility: hidden;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .front {
+            z-index: 2;
+        }
+        .back {
+            transform: rotateY(180deg);
+        }
+        img.pt{
+            width: 400px;height: 500px;
+        }
+        p.pt{
+            background-color: #b0c4de;font-size: 20px;
+        }
+        img.p{
+            width: 700px;height: 500px;float: right;padding: 85px 120px 85px 120px;
+        }
+        div.left{
+            float: left;
+        }
+        div.right{
+            clear: both;background-color: #7494b6;padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img class="t" src="assets/images/logo.png">
+    <h2 class="t">中原熱舞社－CYHD</h2>
+
+    <div id="menu">
+        <ul>
+          <li><a href="home.html">首頁</a></li>
+          <li><a href="activity.html">活動介紹</a>
+            <ul>
+              <li><a href="activity.html">社團博覽會</a></li>
+              <li><a href="class.html">體驗課</a></li>
+              <li><a href="perform.html">成果發表會</a></li>
+              <li><a href="club.html">社員大會</a></li>
+              <li><a href="practice.html">寒暑訓</a></li>
+            </ul>
+          </li>
+          <li> <a href="popping.html">舞風介紹</a>
+            <ul>
+              <li><a href="popping.html">Popping</a></li>
+              <li><a href="locking.html">Locking</a></li>
+              <li><a href="hip-hop.html">Hip-Hop</a></li>
+              <li><a href="girl's style.html">Girl's Style</a></li>
+            </ul>
+          </li>
+            <li> <a href="">影片</a></li>
+            <li> <a href="">關於我們</a></li>
+            <li> <a href="">表單</a></li>
+        </ul>
+    </div>
+
+    <div class="left">
+        <h1>社師介紹:豬仔老師</h1>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front">
+                    <img class="pt" src="assets/images/PT.jpg">
+                </div>
+                <div class="back">
+                    <p class="pt">
+                        經歷<br>
+                        High School High Vol.10 評審<br>
+                        新竹市長盃 街舞大賽 評審<br>
+                        Giving Battle Vol.3 評審<br>
+                        Giving Battle Vol.5 評審<br>
+                        高雄Purse The Roots Vol.7評審<br>
+                        Battle 101 Vol.10 評審<br>
+                        第三屆台北世界紋身街舞大賽 評審<br>
+                        JustFunk Vol.7 評審<br>
+                        JustFunk Vol.8 評審<br>
+                        JustFunk Vol.9 評審<br>
+                        Mix Party桃竹苗高中職街舞大賽Vol.8 評審<br>
+                        Next ChampionVol.4 高中職組 評審<br>
+                        Free Style High School Vol.3 評審<br>
+                        2016香港 SDK ASIA ALL STYLE 5 ON 5 BEST 8<br>
+                        2017澳洲 Destructive Steps世界舞蹈大賽 Popping 冠軍<br>
+                        2017中國 福建ＣＢＣ世界賽 Best 4<br>
+                        2019上海 Yellow Choco 世界舞蹈大賽 亞軍<br>
+                        2019馬來西亞 who is champion 世界舞蹈大賽 亞軍<br>
+                        2019日本 DANCE ENOUGH BATTLE 亞軍
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img class="p" src="assets/images/P.jpg">
+
+    <div class="right">
+        <h1>Popping介紹</h1>
+        <h2>基本是藉由肌肉迅速地收縮與放鬆的技巧，使舞者的身體產生種震的感覺，般的POPPING包括了肩膀、胸部、手臂、腿部等等。有時Waving（電流）也被現在的舞者融匯在POPPIN的範圍裡。</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locking</title>
+    <style>
+        body{
+            background-color: #f0f0f0;
+        }
+        img.t{
+            height: 95px;
+            width: 110px;
+            padding: 3px 1px 3px 3px;
+            float: left;
+        }
+        h2.t{
+            padding: 9px;
+            float: left;
+            color: white;
+        }
+        #menu {
+            width: 1500px;
+            height:100px;
+            background-color: #7494b6;
+            text-align: center;
+        }
+        #menu ul {
+            list-style-type:none;
+            margin:0;
+            padding:35px 10px 20px 10px;
+            display: inline-block;
+        }
+        #menu ul li {
+            float:left;
+        }
+        #menu ul li a {
+            display:block;
+            float:left;
+            height:30px;
+            width: 100px;
+            text-align: center;
+        }
+        #menu ul li ul {
+            position:absolute;
+            width:100px;
+            overflow:visible;
+            clear:left;
+            margin-top: 30px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+        #menu ul li ul li {
+            float:none;
+            text-align: center;
+        }
+        #menu ul li ul li a {
+            float:none;
+            width: 100%;
+        }
+        #menu ul li ul li ul {
+            margin-top: -30px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 100px;
+            width: 100%;
+        }
+        #menu ul li ul {
+            visibility:hidden;
+        }
+        #menu ul li:hover ul {
+            visibility:visible;
+        }
+        #menu {
+            font-size:20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #menu ul {
+            background: #7494b6;
+        }
+        #menu ul li a {
+            color:white;
+            text-decoration:none;
+            line-height: 30px;
+        }
+        #menu ul li ul {
+            display: block;
+            background:#b0c4de;
+        }
+        #menu ul li ul li a {
+            font-size:18px;
+            color:#000;
+            text-decoration:none;
+        }
+        #menu ul li:hover, #menu ul li a:hover {
+            background:#f0f0f0;
+        }
+        #menu ul li:hover a {
+            color:#333333;
+        }
+        #menu ul li ul li:hover, #menu ul li ul li a:hover {
+            background:white;
+        }
+
+        .flip-container {
+            perspective: 1000;
+        }
+        .flip-container:hover .flipper, .flip-container.hover .flipper {
+            transform: rotateY(180deg);
+        }
+        .flip-container, .front, .back {
+            width: 400px;
+            height: 500px;
+        }
+        .flipper {
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        .front, .back {
+            backface-visibility: hidden;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .front {
+            z-index: 2;
+        }
+        .back {
+            transform: rotateY(180deg);
+        }
+        img.lt{
+            width: 400px;height: 500px;
+        }
+        p.lt{
+            background-color: #b0c4de;font-size: 20px;
+        }
+        img.l{
+            width: 700px;height: 500px;float: right;padding: 85px 120px 85px 120px;
+        }
+        div.left{
+            float: left;
+        }
+        div.right{
+            clear: both;background-color: #7494b6;padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img class="t" src="assets/images/logo.png">
+    <h2 class="t">中原熱舞社－CYHD</h2>
+
+    <div id="menu">
+        <ul>
+          <li><a href="home.html">首頁</a></li>
+          <li><a href="activity.html">活動介紹</a>
+            <ul>
+              <li><a href="activity.html">社團博覽會</a></li>
+              <li><a href="class.html">體驗課</a></li>
+              <li><a href="perform.html">成果發表會</a></li>
+              <li><a href="club.html">社員大會</a></li>
+              <li><a href="practice.html">寒暑訓</a></li>
+            </ul>
+          </li>
+          <li> <a href="popping.html">舞風介紹</a>
+            <ul>
+              <li><a href="popping.html">Popping</a></li>
+              <li><a href="locking.html">Locking</a></li>
+              <li><a href="hip-hop.html">Hip-Hop</a></li>
+              <li><a href="girl's style.html">Girl's Style</a></li>
+            </ul>
+          </li>
+            <li> <a href="">影片</a></li>
+            <li> <a href="">關於我們</a></li>
+            <li> <a href="">表單</a></li>
+        </ul>
+    </div>
+
+    <div class="left">
+        <h1>社師介紹:小黑老師</h1>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front">
+                    <img class="lt" src="assets/images/LT.jpg">
+                </div>
+                <div class="back">
+                    <p class="lt">
+                        經歷<br>
+                        2020 宜蘭街頭文化藝術節的冠軍<br>
+                        在鎖 vol.5中擔任judge<br>
+                        更曾在韓國拿下R16街舞比賽的冠軍<br>
+                        而除了跳舞外，也任職於潮牌負惡代
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img class="l" src="assets/images/L.jpg">
+
+    <div class="right">
+        <h1>Locking介紹</h1>
+        <h2>鎖舞依賴快速、明顯的手臂以及手肘運動，搭配比較放鬆的臀部和腿部。這些運動通常又大又誇張，往往極具韻律感並且和音樂緊密接合。鎖舞是相當表演導向的，經常藉由微笑或高舉雙手擊掌來與觀眾互動，具有喜劇性質。</h2>
+    </div>
+</body>
+</html>
