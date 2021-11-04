@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們</title>
+
+    <style>
+         body{
+             background-color: rgb(199,213,233);
+         }
+        
+        h2{
+            padding: 9px;
+            float: left;
+            color: white;
+        }
+        #menu {
+            width: 1265px;
+            height:100px;
+            background-color: #7494b6;
+            text-align: center;
+        }
+        #menu ul {
+            list-style-type:none;
+            margin:0;
+            padding:35px 10px 20px 10px;
+            display: inline-block;
+        }
+        #menu ul li {
+            float:left;
+        }
+        #menu ul li a {
+            display:block;
+            float:left;
+            height:30px;
+            width: 100px;
+            text-align: center;
+        }
+        #menu ul li ul {
+            position:absolute;
+            width:100px;
+            overflow:visible;
+            clear:left;
+            margin-top: 30px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+        }
+        #menu ul li ul li {
+            float:none;
+            text-align: center;
+        }
+        #menu ul li ul li a {
+            float:none;
+            width: 100%;
+        }
+        #menu ul li ul li ul {
+            margin-top: -30px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 100px;
+            width: 100%;
+        }
+        #menu ul li ul {
+            visibility:hidden;
+        }
+        #menu ul li:hover ul {
+            visibility:visible;
+        }
+        #menu {
+            font-size:20px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #menu ul {
+            background: #7494b6;
+        }
+        #menu ul li a {
+            color:white;
+            text-decoration:none;
+            line-height: 30px;
+        }
+        #menu ul li ul {
+            display: block;
+            background:#b0c4de;
+        }
+        #menu ul li ul li a {
+            font-size:18px;
+            color:#000;
+            text-decoration:none;
+        }
+        #menu ul li:hover, #menu ul li a:hover {
+            background:#f0f0f0;
+        }
+        #menu ul li:hover a {
+            color:#333333;
+        }
+        #menu ul li ul li:hover, #menu ul li ul li a:hover {
+            background:white;
+        }
+        .div7{
+            
+            background-color: #F0F0F0;
+            margin: 0px 100px;
+            box-shadow: 0 20px 30px 6px  #03110494;
+        }
+       
+     
+        #p{
+              
+            background: -webkit-linear-gradient(left top,white,rgba(162, 209, 248, 0.301));
+            background: -o-linear-gradient(bottom right,white,rgba(162, 209, 248, 0.301));
+            background: -moz-linear-gradient(bottom right,white,rgba(162, 209, 248, 0.301));
+            background: linear-gradient(to bottom right,white,rgba(162, 209, 248, 0.301));
+            border-radius:40px 10px;
+            padding-top: 25px;
+            padding-left: 25px;
+            padding-bottom: 30px;
+            padding-right: 25px;
+            margin: 5px 30px;
+            box-shadow:4px 4px 12px 4px rgba(65, 65, 87, 0.5);
+        }
+        #o{
+            background: -webkit-linear-gradient(left top,white,rgba(162, 209, 248, 0.301));
+            background: -o-linear-gradient(bottom right,white,rgba(162, 209, 248, 0.301));
+            background: -moz-linear-gradient(bottom right,white,rgba(162, 209, 248, 0.301));
+            background: linear-gradient(to bottom right,white,rgba(162, 209, 248, 0.301));
+            border-radius:40px 10px;
+            padding-top: 25px;
+            padding-left: 25px;
+            padding-bottom: 30px;
+            padding-right: 25px;
+            margin: 30px 30px;
+            box-shadow:4px 4px 12px 4px rgba(65, 65, 87, 0.5);
+            
+            }
+            #l{
+                background: -webkit-linear-gradient(left top,white,rgba(162, 209, 248, 0.301));
+            background: -o-linear-gradient(bottom right,white,rgba(162, 209, 248, 0.301));
+            background: -moz-linear-gradient(bottom right,white,rgba(162, 209, 248, 0.301));
+            background: linear-gradient(to bottom right,white,rgba(162, 209, 248, 0.301));
+            border-radius:40px 10px;
+            padding-top: 25px;
+            padding-left: 25px;
+            padding-bottom: 30px;
+            padding-right: 25px;
+            margin: 30px 30px;
+            box-shadow:4px 4px 12px 4px rgba(65, 65, 87, 0.5);
+            }
+            #k{
+                background: -webkit-linear-gradient(left top,white,rgba(162, 209, 248, 0.301));
+            background: -o-linear-gradient(bottom right,white,rgba(162, 209, 248, 0.301));
+            background: -moz-linear-gradient(bottom right,white,rgba(162, 209, 248, 0.301));
+            background: linear-gradient(to bottom right,white,rgba(162, 209, 248, 0.301));
+            border-radius:40px 10px;
+            padding-top: 25px;
+            padding-left: 25px;
+            padding-bottom: 25px;
+            padding-right: 25px;
+            margin: 30px 30px;
+            box-shadow:4px 4px 12px 4px rgba(65, 65, 87, 0.5);
+        }
+  
+        
+        .image-container{
+          max-width: 90%;
+          margin: 0 auto;
+        }
+        .div1{
+            float:left;
+            margin: -110px -40px;      
+        }
+        .div1 img{transform:scale(1,1);transition: all 1s ease-out;}
+        .div1 img:hover{transform:scale(1.2,1.2);}
+        
+        .div2{
+            float:right;
+            margin: -90px -25px;      
+        }
+        .div2 img{transform:scale(1,1);transition: all 1s ease-out;}
+        .div2 img:hover{transform:scale(1.2,1.2);}
+       
+        .div3{
+            float:left;
+            margin: 5px 5px;
+        }
+        .pic{width:500px; height:350px;overflow:hidden;}
+        .div4{
+            margin: 0px 50px;
+        }
+        .div5{
+            background-image:"assets/images/people1.png";
+            background: position 100px 100px;
+            background-attachment: fixed, scroll;
+        }
+
+        .div6{
+		background-image: "assets/images/people1.png";
+		background-position: left;
+        position:absolute;
+
+        }
+       
+        
+   </style>
+</head>
+
+<body>   
+    <img src="assets/images/logo.png" style=" height: 95px;width: 110px;padding: 3px 1px 3px 3px;float: left;">
+    <h2>中原熱舞社－CYHD</h2>
+    <div id="menu">
+        <ul>
+          <li><a href="home.html">首頁</a></li>
+          <li><a href="activity.html">活動介紹</a>
+            <ul>
+              <li><a href="activity.html">社團博覽會</a></li>
+              <li><a href="class.html">體驗課</a></li>
+              <li><a href="perform.html">成果發表會</a></li>
+              <li><a href="club.html">社員大會</a></li>
+              <li><a href="practice.html">寒暑訓</a></li>
+            </ul>
+          </li>
+          <li> <a href="popping.html">舞風介紹</a>
+            <ul>
+              <li><a href="popping.html">Popping</a></li>
+              <li><a href="locking.html">Locking</a></li>
+              <li><a href="hip-hop.html">Hip-Hop</a></li>
+              <li><a href="girl's style.html">Girl's Style</a></li>
+            </ul>
+          </li>
+            <li> <a href="film.html">影片</a></li>
+            <li> <a href="about us.html">關於我們</a></li>
+            <li> <a href="">表單</a></li>
+        </ul>
+        </div>
+    <div class="div7">
+    <img src="assets/images/about.png" style=" height: 220px;width: 750px;padding: 3px 1px 3px 100px;float:none;">
+    
+    <img src="assets/images/people1.png" style="width:220px;height:220px;position:absolute;left:70px;top:100px;"/>
+    <img src="assets/images/people2.png" style="width:170px;height:170px;position:absolute;right: 100px;top:130px;"/>
+
+    <div class="image-container">
+    <div id="p">
+    
+    <div class="div1"><a href="https://www.instagram.com/its_0108/"><img src="assets/images/d.png" width="320" height="420"></a></div>
+    <p><h1>曾羿慈</h1></p>
+    <b>興趣:打籃球</b><br>
+    <b>生日:91/01/08</b><br>
+    <p><b>心得：這次的期中專題我負責製作網站，看著原本一片空白的網頁，一點一點的增加各種東西真的很有成就感，雖然專題製作的時間非常緊湊，組員們也都很忙，但大家都非常認真，一起討論、分工合作，讓專題順利完成。</b></p><br>
+
+    </div>
+</div>
+<div class="image-container">
+    <div id="o">
+    <div class="div2"><a href="https://www.instagram.com/cix_0517/"><img src="assets/images/c.png" width="270" height="350"></a></div>
+    <div class="div4"><p><h1>陳奕璇</h1></p>
+    <b>興趣:游泳</b><br>
+    <b>生日:91/05/17</b><br>
+    <p><b>心得:次做網頁的時間很趕，但看到網頁做出來的成果，感覺很有成就感，以前高中有上過網頁的東西，但都沒有實際做出來過，這次能有這機會非常開心，雖然做一個網頁所花的時間非常多，透過這次的機會也<br>讓我更了解網頁編排的方法。</b></p></div>
+
+    </div>
+    </div>
+
+<div class="image-container">
+    <div id="l">
+    <div class="div1"><a href="https://www.instagram.com/yung_yuan0331/"><img src="assets/images/a.png" width="380" height="460"></a></div>
+    <p><h1>江詠媛</h1></p>
+    <b>興趣:排球、繪畫</b><br>
+    <b>生日:90/03/31</b>
+    <p><b>心得:看到我們組的網頁從無到有，心中很感動。雖然中間排版與設計在程式碼的部分寫得很挫折、很崩潰，但是做完後成就感真的是爆棚，很開心能夠與夥伴們一起做這份網頁!</b></p>
+
+    </div>
+    </div>
+<div class="image-container">
+    <div id="k">
+    <div class="div2"><a href="https://www.instagram.com/lsabelpei/"><img src="assets/images/b.png" width="300" height="360"></a></div>
+    <div class="div4"><p><h1>應賢霈</h1></p>
+    <b>興趣:排球、吉他</b><br>
+    <b>生日:90/11/15</b><br>
+    <p><b>心得:多媒體網程設計是全新的體驗，負責影片宣傳和剪片，很快樂的畫小插圖，和程式碼對抗著，如果有充裕的時間製作，一定會更有趣吧！</b></p></div>
+
+    </div>
+</div>
+</div>
+</body>
+
+</html>
