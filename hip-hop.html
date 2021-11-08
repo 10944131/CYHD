@@ -6,103 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hip-Hop</title>
     <style>
-        body{
-            background-color: #f0f0f0;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        img.t{
+        body{
+            background-color: rgb(199, 213, 233);
+        }
+        header{
+        width: 100%;
+        height: 100px;
+        background-color: #7494b6;
+        padding:0 100px;
+        z-index: 999;
+        position: relative;
+       }
+       .left{
+           float: left;
+       }
+       .right{
+           float: right;
+       }
+       img{
             height: 95px;
             width: 110px;
             padding: 3px 1px 3px 3px;
-            float: left;
         }
-        h2.t{
-            padding: 9px;
-            float: left;
+        h2{
+            float:right;
             color: white;
-        }
-        #menu {
-            width: 1870px;
-            height:100px;
-            background-color: #7494b6;
+            line-height: 100px;
             text-align: center;
         }
-        #menu ul {
-            list-style-type:none;
-            margin:0;
-            padding:35px 10px 20px 10px;
-            display: inline-block;
-        }
-        #menu ul li {
-            float:left;
-        }
-        #menu ul li a {
-            display:block;
-            float:left;
-            height:30px;
-            width: 100px;
-            text-align: center;
-        }
-        #menu ul li ul {
-            position:absolute;
-            width:100px;
-            overflow:visible;
-            clear:left;
-            margin-top: 30px;
-            margin-right: 0;
-            margin-bottom: 0;
-            margin-left: 0;
-        }
-        #menu ul li ul li {
-            float:none;
-            text-align: center;
-        }
-        #menu ul li ul li a {
-            float:none;
+       ul>li{
+           float: left;
+           list-style:none;
+           width: 100px;
+           height: 100px;
+           line-height: 100px;
+           text-align: center;
+       }
+       ul>li:hover{
+           background-color: #b0c4de;
+           color:#000;
+           transition:0.5s ;
+       }
+       ul>li>ul>li{
+            background-color:#b0c4de;
+            clear: left;
+            list-style:none;
             width: 100%;
+            z-index: 1000;
+            text-align: center;
+       }
+       ul>li:hover>ul>li:hover{
+           background-color: #7494b6;
+           color:black;
+           transition:0.5s ;
         }
-        #menu ul li ul li ul {
-            margin-top: -30px;
-            margin-right: 0;
-            margin-bottom: 0;
-            margin-left: 100px;
-            width: 100%;
-        }
-        #menu ul li ul {
-            visibility:hidden;
-        }
-        #menu ul li:hover ul {
-            visibility:visible;
-        }
-        #menu {
-            font-size:20px;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-        #menu ul {
-            background: #7494b6;
-        }
-        #menu ul li a {
+        ul>li>a{
             color:white;
-            text-decoration:none;
-            line-height: 30px;
+            text-decoration:none
         }
-        #menu ul li ul {
-            display: block;
-            background:#b0c4de;
+        ul>i>ul>li>a{
+            text-decoration:none
         }
-        #menu ul li ul li a {
-            font-size:18px;
-            color:#000;
-            text-decoration:none;
+        ul>li>ul{
+            visibility: hidden;
         }
-        #menu ul li:hover, #menu ul li a:hover {
-            background:#f0f0f0;
+        ul>li:hover>ul>li{
+            visibility: visible;
         }
-        #menu ul li:hover a {
-            color:#333333;
-        }
-        #menu ul li ul li:hover, #menu ul li ul li a:hover {
-            background:white;
-        }
+       section{
+           width: 80%;
+           display: block;
+           height: calc(100vh - 100px);
+           background-color: #fff;
+           margin: auto;
+           z-index: 9;
+
+       }
 
         .flip-container {
             perspective: 1000;
@@ -144,40 +128,44 @@
         div.left{
             float: left;
         }
-        div.right{
+        .under{
             clear: both;background-color: #7494b6;padding: 50px;
+            height: 300px;width: 100%;
         }
     </style>
 </head>
 <body>
-    <img class="t" src="assets/images/logo.png">
-    <h2 class="t">中原熱舞社－CYHD</h2>
-
-    <div id="menu">
-        <ul>
-          <li><a href="home.html">首頁</a></li>
-          <li><a href="activity.html">活動介紹</a>
+    <header>
+        <div class="left">
+            <img src="assets/images/logo.png">
+            <h2>中原熱舞社－CYHD</h2>
+        </div>
+        <div class="right">
             <ul>
-              <li><a href="activity.html">社團博覽會</a></li>
-              <li><a href="class.html">體驗課</a></li>
-              <li><a href="perform.html">成果發表會</a></li>
-              <li><a href="club.html">社員大會</a></li>
-              <li><a href="practice.html">寒暑訓</a></li>
+                <li><a href="home.html">首頁</a></li>
+                <li><a href="activity.html">活動介紹</a>
+                <ul>
+                    <li><a href="activity.html">社團博覽會</a></li>
+                    <li><a href="class.html">體驗課</a></li>
+                    <li><a href="perform.html">成果發表會</a></li>
+                    <li><a href="club.html">社員大會</a></li>
+                    <li><a href="practice.html">寒暑訓</a></li>
+                </ul>
+                </li>
+                <li> <a href="popping.html">舞風介紹</a>
+                <ul>
+                    <li><a href="popping.html">Popping</a></li>
+                    <li><a href="locking.html">Locking</a></li>
+                    <li><a href="hip-hop.html">Hip-Hop</a></li>
+                    <li><a href="girl's style.html">Girl's Style</a></li>
+                </ul>
+                </li>
+                <li> <a href="film.html">影片</a></li>
+                <li> <a href="about us.html">關於我們</a></li>
+                <li> <a href="form.html">表單</a></li>
             </ul>
-          </li>
-          <li> <a href="popping.html">舞風介紹</a>
-            <ul>
-              <li><a href="popping.html">Popping</a></li>
-              <li><a href="locking.html">Locking</a></li>
-              <li><a href="hip-hop.html">Hip-Hop</a></li>
-              <li><a href="girl's style.html">Girl's Style</a></li>
-            </ul>
-          </li>
-            <li> <a href="film.html">影片</a></li>
-            <li> <a href="about us.html">關於我們</a></li>
-            <li> <a href="form.html">表單</a></li>
-        </ul>
-    </div>
+        </div>
+    </header>
 
     <div class="left">
         <h1>社師介紹:C平老師</h1>
@@ -211,7 +199,7 @@
 
     <img class="h" src="assets/images/H.jpg">
 
-    <div class="right">
+    <div class="under">
         <h1>Hip-Hop介紹</h1>
         <h2>充滿了彈跳與彈性,有時硬有時軟,重視身體規律的移動與音樂節奏的呈現.為時下最流行也最讓大家快速接受的街舞類型。</h2>
     </div>

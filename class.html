@@ -4,191 +4,164 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>體驗課</title>
+    <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body{
             background-color: rgb(199, 213, 233);
-            margin: 0px;
         }
-        img{
+       header{
+        width: 100%;
+        height: 100px;
+        background-color: #7494b6;
+        padding:0 100px;
+        z-index: 999;
+        position: relative;
+       }
+       .left{
+           float: left;
+       }
+       .right{
+           float: right;
+       }
+       img{
             height: 95px;
             width: 110px;
             padding: 3px 1px 3px 3px;
-            float: left;
         }
         h2{
-            padding: 9px;
-            float: left;
+            float:right;
             color: white;
-        }
-        #menu {
-            width: 1870px;
-            height:100px;
-            background-color: #7494b6;
+            line-height: 100px;
             text-align: center;
         }
-        #menu ul {
-            list-style-type:none;
-            margin:0;
-            padding:35px 10px 20px 10px;
-            display: inline-block;
-        }
-        #menu ul li {
-            float:left;
-        }
-        #menu ul li a {
-            display:block;
-            float:left;
-            height:30px;
-            width: 100px;
-            text-align: center;
-        }
-        #menu ul li ul {
-            position:absolute;
-            width:100px;
-            overflow:visible;
-            clear:left;
-            margin-top: 30px;
-            margin-right: 0;
-            margin-bottom: 0;
-            margin-left: 0;
-        }
-        #menu ul li ul li {
-            float:none;
-            text-align: center;
-        }
-        #menu ul li ul li a {
-            float:none;
+       ul>li{
+           float: left;
+           list-style:none;
+           width: 100px;
+           height: 100px;
+           line-height: 100px;
+           text-align: center;
+       }
+       ul>li:hover{
+           background-color: #b0c4de;
+           color:#000;
+           transition:0.5s ;
+       }
+       ul>li>ul>li{
+            background-color:#b0c4de;
+            clear: left;
+            list-style:none;
             width: 100%;
+            z-index: 1000;
+            text-align: center;
+       }
+       ul>li:hover>ul>li:hover{
+           background-color: #7494b6;
+           color:black;
+           transition:0.5s ;
         }
-        #menu ul li ul li ul {
-            margin-top: -30px;
-            margin-right: 0;
-            margin-bottom: 0;
-            margin-left: 100px;
-            width: 100%;
-        }
-        #menu ul li ul {
-            visibility:hidden;
-        }
-        #menu ul li:hover ul {
-            visibility:visible;
-        }
-        #menu {
-            font-size:20px;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-        #menu ul {
-            background: #7494b6;
-        }
-        #menu ul li a {
+        ul>li>a{
             color:white;
-            text-decoration:none;
-            line-height: 30px;
+            text-decoration:none
         }
-        #menu ul li ul {
-            display: block;
-            background:#b0c4de;
+        ul>i>ul>li>a{
+            text-decoration:none
         }
-        #menu ul li ul li a {
-            font-size:18px;
-            color:#000;
-            text-decoration:none;
+        ul>li>ul{
+            visibility: hidden;
         }
-        #menu ul li:hover, #menu ul li a:hover {
-            background:#f0f0f0;
+        ul>li:hover>ul>li{
+            visibility: visible;
         }
-        #menu ul li:hover a {
-            color:#333333;
-        }
-        #menu ul li ul li:hover, #menu ul li ul li a:hover {
-            background:white;
-        }
+       section{
+           width: 80%;
+           display: block;
+           height: calc(100vh - 100px);
+           background-color: #fff;
+           margin: auto;
+           z-index: 9;
 
-        p.tex{
-            position: absolute;
-            left: 1000px;
-            top: 280px;
-            z-index: 1;
-            text-align: center;
-            font-size: 15pt;
-            background-color: #b0c4de;
-            width: 450px;
-            height: 115px;
+       }
+       .allimg{
+           margin: auto;
+           width: 400px;
+           height: 300px;
+           display: flex;
+           overflow: hidden;
+       }
+       .allimg img{
+           width: 100%;
+           height: 300px;
+           transform: translateX(-100px);
+           animation:move 20s infinite;
+       }
+       @keyframes move{
+        0%{
+            transform: translateX(0px);
         }
-        h1{
-            position: absolute;
-            left: 1000px;
-            top: 180px;
-            text-align: center;
-            border-radius: 25px;
-            border: #b0c4de 1px solid;
-            width: 450px;
-            height: 50px;
+        50%{
+            transform: translateX(-800px);
+
         }
-        .marquee{
-            position: relative;
-            top: 40px;left: 10px;
-            float: left;
-            width: 50%;
-            height: 50%;
+        100%{
+            transform: translateX(0px);
+
         }
-        #section{
-            position: absolute;
-            z-index: 0;
-            background-color: #F0F0F0;
-            height: 500px;
-            padding-top: 100px;
-            margin: 0px 100px;
-            box-shadow: 0 0 40px 6px #03110494;
-        }
-        #position{
-            position: absolute;
-            z-index: 1;
+       }
+        .text{
+          font-size: 18px; 
+          padding: 10px; 
         }
     </style>
 </head>
 <body>
-    <div id="position">
-    <img src="assets/images/logo.png">
-    <h2>中原熱舞社－CYHD</h2>
-    <div id="menu">
-        <ul>
-          <li><a href="home.html">首頁</a></li>
-          <li><a href="activity.html">活動介紹</a>
-            <ul>
-              <li><a href="activity.html">社團博覽會</a></li>
-              <li><a href="class.html">體驗課</a></li>
-              <li><a href="perform.html">成果發表會</a></li>
-              <li><a href="club.html">社員大會</a></li>
-              <li><a href="practice.html">寒暑訓</a></li>
-            </ul>
-          </li>
-          <li> <a href="popping.html">舞風介紹</a>
-            <ul>
-              <li><a href="popping.html">Popping</a></li>
-              <li><a href="locking.html">Locking</a></li>
-              <li><a href="hip-hop.html">Hip-Hop</a></li>
-              <li><a href="girl's style.html">Girl's Style</a></li>
-            </ul>
-          </li>
-            <li> <a href="film.html">影片</a></li>
-            <li> <a href="about us.html">關於我們</a></li>
-            <li> <a href="form.html">表單</a></li>
-        </ul>
-    </div>
-    </div>
-    <div id="section">
-      <div id="club">
-        <img class="marquee" src="assets/images/IMG_2381.jpg">
-            <h1>體驗課</h1>
-            <p class="tex">
-                讓新生在各個多樣的舞風中，體驗<br>
-                到舞風之間不同的差異，並且可根<br>
-                據體驗的感受來決定要加入哪一組<br>
-                ，體驗課期間都是不收費的
-            </p>
+    <header>
+        <div class="left">
+            <img src="assets/images/logo.png">
+            <h2>中原熱舞社－CYHD</h2>
         </div>
-    </div>
+        <div class="right">
+            <ul>
+                <li><a href="home.html">首頁</a></li>
+                <li><a href="activity.html">活動介紹</a>
+                <ul>
+                    <li><a href="activity.html">社團博覽會</a></li>
+                    <li><a href="class.html">體驗課</a></li>
+                    <li><a href="perform.html">成果發表會</a></li>
+                    <li><a href="club.html">社員大會</a></li>
+                    <li><a href="practice.html">寒暑訓</a></li>
+                </ul>
+                </li>
+                <li> <a href="popping.html">舞風介紹</a>
+                <ul>
+                    <li><a href="popping.html">Popping</a></li>
+                    <li><a href="locking.html">Locking</a></li>
+                    <li><a href="hip-hop.html">Hip-Hop</a></li>
+                    <li><a href="girl's style.html">Girl's Style</a></li>
+                </ul>
+                </li>
+                <li> <a href="film.html">影片</a></li>
+                <li> <a href="about us.html">關於我們</a></li>
+                <li> <a href="form.html">表單</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <div class="text">
+            <h1>體驗課</h1>
+            <p>讓新生在各個多樣的舞風中，體驗到舞風之間不同的差異，並且可根據體驗的感受來決定要加入哪一組，體驗課期間都是不收費的</p>
+        </div>
+        <div class="allimg">
+            <img src="assets/images/IMG_2381.JPG 的副本.jpg" alt="" class="img1">
+            <img src="assets/images/IMG_3435.JPG 的副本.jpg" alt="">
+            <img src="assets/images/IMG_3577.JPG 的副本.jpg" alt="">
+        </div>
+    </section>
+    
 </body>
 </html>
