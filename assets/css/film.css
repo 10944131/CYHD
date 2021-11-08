@@ -1,157 +1,138 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: rgb(199, 213, 233);
-    margin: 0; 
-    padding-bottom: 50px;
-    border: none;
-    height: 701px;
-    width: 1265px;
-    min-width: 1000px;
-    background-size: 1265px 701px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
 }
 
-.position{
-   position:absolute;
-   z-index: 5;
-}
-
-img{
-    height: 95px;
-    width: 110px;
-    padding: 3px 1px 3px 3px;
-    float: left;
-}
-h2{
-    padding: 9px;
-    float: left;
-    color: white;
-}
-#menu {
-    width: 1265px;
-    height:100px;
+header{
+    width: 100%;
+    height: 100px;
     background-color: #7494b6;
-    text-align: center;
-}
-#menu ul {
-    list-style-type:none;
-    margin:0;
-    padding:35px 10px 20px 10px;
-    display: inline-block;
-}
-#menu ul li {
-    float:left;
-}
-#menu ul li a {
-    display:block;
-    float:left;
-    height:30px;
-    width: 100px;
-    text-align: center;
-}
-#menu ul li ul {
-    position:absolute;
-    width:100px;
-    overflow:visible;
-    clear:left;
-    margin-top: 30px;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-}
-#menu ul li ul li {
-    float:none;
-    text-align: center;
-}
-#menu ul li ul li a {
-    float:none;
-    width: 100%;
-}
-#menu ul li ul li ul {
-    margin-top: -30px;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 100px;
-    width: 100%;
-}
-#menu ul li ul {
-    visibility:hidden;
-}
-#menu ul li:hover ul {
-    visibility:visible;
-}
-#menu {
-    font-size:20px;
-    font-family:Arial, Helvetica, sans-serif;
-}
-#menu ul {
-    background: #7494b6;
-}
-#menu ul li a {
-    color:white;
-    text-decoration:none;
-    line-height: 30px;
-}
-#menu ul li ul {
-    display: block;
-    background:#b0c4de;
-}
-#menu ul li ul li a {
-    font-size:18px;
-    color:#000;
-    text-decoration:none;
-}
-#menu ul li:hover, #menu ul li a:hover {
-    background:#f0f0f0;
-}
-#menu ul li:hover a {
-    color:#333333;
-}
-#menu ul li ul li:hover, #menu ul li ul li a:hover {
-    background:white;
-}
-
-
-
-
-.section {
-    z-index: 0;
+    padding:0 100px;
+    z-index: 999;
     position: relative;
-    background: #F0F0F0;
-    height: 700px;
-    padding-top: 100px;
-    margin: 0px 100px;
-    box-shadow: 0 0 40px 6px #03110494;
+   }
+   .left{
+       float: left;
+   }
+   .right{
+       float: right;
+   }
+   img{
+        height: 95px;
+        width: 110px;
+        padding: 3px 1px 3px 3px;
     }
+    h2{
+        float:right;
+        color: white;
+        line-height: 100px;
+        text-align: center;
+    }
+   ul>li{
+       float: left;
+       list-style:none;
+       width: 100px;
+       height: 100px;
+       line-height: 100px;
+       text-align: center;
+   }
+   ul>li:hover{
+       background-color: #b0c4de;
+       color:#000;
+       transition:0.5s ;
+   }
+   ul>li>ul>li{
+        background-color:#b0c4de;
+        clear: left;
+        list-style:none;
+        width: 100%;
+        z-index: 1000;
+        text-align: center;
+   }
+   ul>li:hover>ul>li:hover{
+       background-color: #7494b6;
+       color:black;
+       transition:0.5s ;
+    }
+    ul>li>a{
+        color:white;
+        text-decoration:none
+    }
+    ul>i>ul>li>a{
+        text-decoration:none
+    }
+    ul>li>ul{
+        visibility: hidden;
+    }
+    ul>li:hover>ul>li{
+        visibility: visible;
+    }
+.section{
+    width: 80%;
+    height: 100%;
+    display: block;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 0 40px 6px #03110494;
+}
+
+.topicimg{
+    position: relative;
+    display: block;
+    height: 1%;
+    width: 40%;
+    align-items: center;
+    left: 31%;
+    padding-top: 70px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
 
 .topic{
     position: absolute;
-    z-index: 3;
+    display: block;
     font-family: 'Times New Roman', Times, serif;
     font-size: 40px;
     color: rgb(24, 24, 24);
     font-weight: bold;
     text-align: center;
-    padding-left: 100;
-    padding-left: 428px;
-    padding-top: 80px;
-
+    left: 43.7%;
+    top: 17%;
+    padding-top: -90px;
 }
 
 .words {
     position: absolute;
-    z-index: 3;
     font-family: 'Times New Roman', Times, serif;
     text-align: left;
+    float: left;
     font-size: 20px;
-    padding-top: 434px;
-    padding-left: 72px;
-    left: 0px;
-    top: 0px;
-    width: 450px;
-    height: 400px;
     color: rgb(65, 65, 65);
+    display: block;
+    top: 44%;
+    left: 7%;
 }
+.textimg{
+    position: absolute;
+    display: block;
+    height: 26%;
+    width: 38%;
+    left:7%;
+    top: 22%;
 
+}
 .introduce{
     color: rgb(24, 24, 24);
     font-weight: bold;
@@ -160,72 +141,20 @@ h2{
 
 .video {
     position: absolute;
-    z-index: 5;
-    padding-bottom: 0px;
-    padding-left: 567px;
-    width: 508px;
-    height: 287px;
-    padding-top: 305px;
-
-
+    display: block;
+    height: 40.4%;
+    width: 43.8%;
+    left:51.2%;
+    top: 54.5%;
 }
 
-.topicimg{
-    position: absolute;
-    z-index: 1;
-    height: 153px;
-    width: 457px;
-    padding-left: 275px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-top: 61px;
-
-
-}
 
 .videoimg{
-    position: absolute;
-    z-index: 0;
-    padding-bottom: 0px;
-    padding-top: 226px;
-    height: 398px;
-    width: 576px;
-    padding-left: 533px;
-
-}
-
-.textimg{
-    position: absolute;
-    z-index: 1;
-    padding-top: 120px;
-    padding-left: 30px;
-    width: 462px;
-    height: 185px;
-
-}
-
-.textline1{
-    position: absolute;
-    z-index: 0;
-    color: rgb(24, 24, 24);
-    font-weight: bold;
-    text-align: left;
-    padding-top: 273px;
-    padding-left: 40px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-
-}
-
-.textline2{
-    position: absolute;
-    z-index: 0;
-    color: rgb(24, 24, 24);
-    font-weight: bold;
-    text-align: left;
-    padding-left: 40px;
-    padding-top: 562px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-
+    position: relative;
+    display: block;
+    height: 50%;
+    width: 50%;
+    align-items: center;
+    left: 48%;
+    top: 10%;
 }
